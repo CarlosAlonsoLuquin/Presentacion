@@ -164,9 +164,9 @@
         <!-- Slide 5 -->
         <section class="slide" id="slide-5">
             <div class="glass-card" style="padding: 2.2rem; max-width: 100%;">
-                <h2 style="margin-bottom: 1rem; text-align: center;">Modelado Visual (Diagramas EER)</h2>
+                <h2 style="margin-bottom: 1rem; text-align: center;">Modelado Visual (Inicio del Modelo)</h2>
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                    <img src="img/DiagramaEER.jpeg" alt="Diagrama EER UI" style="width: 85%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+                    <img src="img/DiagramaEER.jpeg" alt="Interfaz de Modelo" style="width: 85%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
                     <div class="info-card" style="width: 85%; text-align: left; padding: 1.5rem; border-left-color: var(--accent); background: rgba(255, 255, 255, 0.05);">
                         <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Cuerpo del Modelo (Model Overview)</h3>
                         <p style="font-size: 1.15rem; line-height: 1.4;">Para diseñar nuestra base de datos de manera gráfica, creamos un nuevo modelo. Aquí podemos ver el esquema principal (ej. <strong>mydb</strong>). Para empezar a visualizar el diagrama y dibujar las tablas se presiona el icono <strong>"Add Diagram"</strong> o bien agregar tablas con <strong>"Add Table"</strong>.</p>
@@ -202,6 +202,104 @@
 
         <!-- Slide 7 -->
         <section class="slide" id="slide-7">
+            <div class="glass-card" style="padding: 2.2rem; max-width: 100%;">
+                <h2 style="margin-bottom: 1rem; text-align: center;">Diagrama de Entidad-Relación (EER)</h2>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                    <img src="img/diagrama_nuevo.png" alt="Diagrama de Entidad-Relación" style="width: 85%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+                    <div class="info-card" style="width: 85%; text-align: left; padding: 1.5rem; border-left-color: var(--accent-secondary); background: rgba(255, 255, 255, 0.05);">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Resultado del Modelado</h3>
+                        <p style="font-size: 1.15rem; line-height: 1.4;">La imagen muestra un modelo EER completo. Aquí se pueden apreciar claramente las distintas entidades, sus atributos clave y detallar cómo se conectan los datos entre sí (relaciones de esquema).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Slide 8 -->
+        <section class="slide" id="slide-8">
+            <div class="glass-card" style="padding: 2.2rem; max-width: 100%;">
+                <h2 style="margin-bottom: 1rem;">Forward Engineering (De Modelo a Código)</h2>
+                <div class="content-split" style="align-items: center; gap: 2rem;">
+                    <div style="flex: 1.4;">
+                        <img src="img/menu_forward.png" alt="Forward Engineering" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); margin-bottom: 1rem;">
+                    </div>
+                    <div style="flex: 1; display:flex; flex-direction:column; gap:1.2rem;">
+                        <div class="quote-box" style="margin-top: 0; padding: 1.5rem; border-left-color: var(--accent); font-size: 1.2rem; background: rgba(242, 145, 17, 0.1);">
+                            Convierte tu diagrama EER en un script SQL o publícalo directamente en el servidor. Ruta: <strong>Database &gt; Forward Engineer...</strong>
+                        </div>
+                        <div class="info-card" style="padding: 1.2rem;">
+                            <h4 style="margin-bottom: 0.2rem;">🔧 Opciones</h4>
+                            <p style="font-size: 1.1rem; line-height: 1.4;">Permite omitir la creación de tablas existentes (DROP objects) o exportar solo ciertas tablas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9 -->
+        <section class="slide" id="slide-9">
+            <div class="glass-card" style="padding: 2.2rem; max-width: 100%;">
+                <h2 style="margin-bottom: 1rem;">Reverse Engineering (De Base de Datos a Diagrama)</h2>
+                <div class="content-split" style="align-items: center; gap: 2rem;">
+                    <div style="flex: 1; display:flex; flex-direction:column; gap:1.2rem;">
+                        <div class="quote-box" style="margin-top: 0; padding: 1.5rem; border-left-color: var(--accent); font-size: 1.2rem; background: rgba(242, 145, 17, 0.1);">
+                            Crea un modelo EER visual a partir de una base de datos ya existente en tu servidor. Ruta: <strong>Database &gt; Reverse Engineer...</strong>
+                        </div>
+                        <div class="info-card" style="padding: 1.2rem;">
+                            <h4 style="margin-bottom: 0.2rem;">📄 Beneficios</h4>
+                            <p style="font-size: 1.1rem; line-height: 1.4;">Ideal para documentar bases de datos creadas por código o para entender la estructura de proyectos heredados.</p>
+                        </div>
+                    </div>
+                    <div style="flex: 1.4;">
+                        <img src="img/menu_reverse.png" alt="Reverse Engineering" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); margin-bottom: 1rem;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10 -->
+        <section class="slide" id="slide-10">
+            <div class="glass-card" style="padding: 2.2rem; max-width: 100%;">
+                <h2 style="margin-bottom: 1rem;">Exportación e Importación de Datos (Backups)</h2>
+                <div class="content-split" style="align-items: center; gap: 2rem;">
+                    <div style="flex: 1.4;">
+                        <img src="img/export.png" alt="Data Export" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); margin-bottom: 1rem;">
+                    </div>
+                    <div style="flex: 1; display:flex; flex-direction:column; gap:1.2rem;">
+                        <div class="quote-box" style="margin-top: 0; padding: 1.5rem; border-left-color: var(--accent); font-size: 1.2rem; background: rgba(242, 145, 17, 0.1);">
+                            Sección <strong>Administration</strong> &gt; <strong>Data Export / Data Import</strong>. Permite hacer respaldos visuales de manera muy sencilla.
+                        </div>
+                        <div class="info-card" style="padding: 1.2rem;">
+                            <h4 style="margin-bottom: 0.2rem;">📂 Formatos</h4>
+                            <p style="font-size: 1.1rem; line-height: 1.4;">Puedes exportar la base de datos completa como un único archivo <em>.sql</em> o como múltiples archivos separados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Slide 11 -->
+        <section class="slide" id="slide-11">
+            <div class="glass-card" style="padding: 2.2rem; max-width: 100%;">
+                <h2 style="margin-bottom: 1rem;">Administración de Usuarios y Privilegios 🛡️</h2>
+                <div class="content-split" style="align-items: center; gap: 2rem;">
+                    <div style="flex: 1.4;">
+                        <img src="img/users.png" alt="Users and Privileges" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); margin-bottom: 1rem;">
+                    </div>
+                    <div style="flex: 1; display:flex; flex-direction:column; gap:1.2rem;">
+                        <div class="quote-box" style="margin-top: 0; padding: 1.5rem; border-left-color: var(--accent); font-size: 1.2rem; background: rgba(242, 145, 17, 0.1);">
+                            Sección <strong>Administration</strong> &gt; <strong>Users and Privileges</strong>. Fundamental para la seguridad de tu base de datos.
+                        </div>
+                        <div class="info-card" style="padding: 1.2rem;">
+                            <h4 style="margin-bottom: 0.2rem;">🔑 Roles</h4>
+                            <p style="font-size: 1.1rem; line-height: 1.4;">Crea usuarios dedicados con contraseñas seguras y asígnales <em>roles</em> específicos solo para las tablas o acciones necesarias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12 -->
+        <section class="slide" id="slide-12">
             <div class="glass-card">
                 <h2>Consultas Básicas (SQL FUNDAMENTAL)</h2>
                 <div class="cards-list">
@@ -219,8 +317,8 @@ VALUES ('Juan', 'Pérez', 'juan@email.com');</code></pre>
             </div>
         </section>
 
-        <!-- Slide 8 -->
-        <section class="slide" id="slide-8">
+        <!-- Slide 13 -->
+        <section class="slide" id="slide-13">
             <div class="glass-card">
                 <h2>Modificación y Eliminación (PRECAUCIÓN)</h2>
                 <div class="quote-box" style="margin-top: 1rem; margin-bottom: 2rem; border-left-color: #ff3333;">
@@ -239,8 +337,8 @@ VALUES ('Juan', 'Pérez', 'juan@email.com');</code></pre>
             </div>
         </section>
         
-        <!-- Slide 9 -->
-        <section class="slide" id="slide-9">
+        <!-- Slide 14 -->
+        <section class="slide" id="slide-14">
             <div class="glass-card">
                 <h2>Funciones de Agregación y Uniones (JOIN)</h2>
                 <div class="cards-list">
@@ -258,8 +356,8 @@ INNER JOIN Ventas v ON c.id_cliente = v.id_cliente;</code></pre>
             </div>
         </section>
 
-        <!-- Slide 10 -->
-        <section class="slide" id="slide-10">
+        <!-- Slide 15 -->
+        <section class="slide" id="slide-15">
             <div class="glass-card">
                 <h2>Mejores Prácticas</h2>
                 <ul class="fancy-list">
@@ -271,8 +369,8 @@ INNER JOIN Ventas v ON c.id_cliente = v.id_cliente;</code></pre>
             </div>
         </section>
 
-        <!-- Slide 11 -->
-        <section class="slide" id="slide-11">
+        <!-- Slide 16 -->
+        <section class="slide" id="slide-16">
             <div class="glass-card center-content">
                 <span class="badge glow">Equipo</span>
                 <h1>¡Gracias por su atención!</h1>
@@ -284,7 +382,7 @@ INNER JOIN Ventas v ON c.id_cliente = v.id_cliente;</code></pre>
 
     <div class="controls">
         <button id="prevBtn" class="control-btn" disabled>←</button>
-        <span class="slide-counter"><span id="current">1</span> / <span id="total">11</span></span>
+        <span class="slide-counter"><span id="current">1</span> / <span id="total">16</span></span>
         <button id="nextBtn" class="control-btn">→</button>
     </div>
 
