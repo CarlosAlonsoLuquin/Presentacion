@@ -380,10 +380,21 @@ INNER JOIN Ventas v ON c.id_cliente = v.id_cliente;</code></pre>
 
     </main>
 
-    <div class="controls">
-        <button id="prevBtn" class="control-btn" disabled>←</button>
-        <span class="slide-counter"><span id="current">1</span> / <span id="total">16</span></span>
-        <button id="nextBtn" class="control-btn">→</button>
+    <!-- Controles Laterales Ocultos -->
+    <div class="nav-area nav-left">
+        <button id="prevBtn" class="nav-arrow" disabled title="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+    </div>
+    <div class="nav-area nav-right">
+        <button id="nextBtn" class="nav-arrow" title="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+
+    <!-- Contador Minimalista Esquina -->
+    <div class="slide-counter-corner">
+        <span id="current">1</span> / <span id="total">16</span>
     </div>
 
     <script src="script.js"></script>
