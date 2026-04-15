@@ -14,7 +14,7 @@
 }
 
 html {
-    font-size: 125%; /* Increases base font-size (16px -> ~20px) to make everything larger for the projector */
+    font-size: 100%; /* Reseteado a 100% para evitar que se desborde en pantallas pequeñas */
 }
 
 body {
