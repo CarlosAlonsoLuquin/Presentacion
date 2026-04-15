@@ -13,6 +13,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 125%; /* Increases base font-size (16px -> ~20px) to make everything larger for the projector */
+}
+
 body {
     font-family: 'Outfit', sans-serif;
     color: var(--text-primary);

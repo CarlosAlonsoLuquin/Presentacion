@@ -300,18 +300,22 @@
 
         <!-- Slide 12 -->
         <section class="slide" id="slide-12">
-            <div class="glass-card">
-                <h2>Consultas Básicas (SQL FUNDAMENTAL)</h2>
-                <div class="cards-list">
-                    <div class="info-card">
-                        <h4>🔍 SELECT y WHERE</h4>
-                        <pre><code>SELECT * FROM Clientes WHERE ciudad = 'Madrid';
-SELECT nombre_producto, precio FROM Productos WHERE precio > 50;</code></pre>
+            <div class="glass-card" style="padding: 2.2rem; max-width: 100%;">
+                <h2 style="margin-bottom: 1rem;">Conceptos Clave de SQL</h2>
+                <div class="content-split" style="gap: 1.5rem; align-items: stretch;">
+                    <div class="info-card" style="padding: 1.2rem; flex: 1;">
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.15rem;">🔍 Cláusulas Comunes</h4>
+                        <p style="font-size: 1.1rem; line-height: 1.4;">
+                            <strong>FROM:</strong> Especifica la tabla principal de donde se extraen los datos.<br><br>
+                            <strong>WHERE:</strong> Filtra los registros que cumplen con una condición específica (muy necesario para ser precisos).
+                        </p>
                     </div>
-                    <div class="info-card">
-                        <h4>➕ INSERT (Crear Registros)</h4>
-                        <pre><code>INSERT INTO Clientes (nombre, apellido, email) 
-VALUES ('Juan', 'Pérez', 'juan@email.com');</code></pre>
+                    <div class="info-card" style="padding: 1.2rem; flex: 1;">
+                        <h4 style="margin-bottom: 0.5rem; font-size: 1.15rem;">🔗 Relaciones y Modificación</h4>
+                        <p style="font-size: 1.1rem; line-height: 1.4;">
+                            <strong>JOIN:</strong> Combina filas de distintas tablas basándose en una columna en común.<br><br>
+                            <strong>UPDATE / DELETE:</strong> Comandos que modifican o eliminan registros en la base de datos (se combinan con WHERE).
+                        </p>
                     </div>
                 </div>
             </div>
@@ -320,37 +324,39 @@ VALUES ('Juan', 'Pérez', 'juan@email.com');</code></pre>
         <!-- Slide 13 -->
         <section class="slide" id="slide-13">
             <div class="glass-card">
-                <h2>Modificación y Eliminación (PRECAUCIÓN)</h2>
-                <div class="quote-box" style="margin-top: 1rem; margin-bottom: 2rem; border-left-color: #ff3333;">
-                    ¡IMPORTANTE: Siempre usar la cláusula WHERE para no afectar toda la tabla!
-                </div>
+                <h2>Creación de Base de Datos</h2>
                 <div class="cards-list">
-                    <div class="info-card" style="border-left-color:#F29111;">
-                        <h4>✏️ UPDATE (Actualizar Datos)</h4>
-                        <pre style="margin-top: 0.5rem; margin-bottom: 0;"><code>UPDATE Productos SET stock = 45 WHERE id_producto = 1;</code></pre>
+                    <div class="info-card">
+                        <h4>🗄️ Crear y Seleccionar</h4>
+                        <pre><code>CREATE DATABASE mi_empresa;
+USE mi_empresa;</code></pre>
                     </div>
-                    <div class="info-card" style="border-left-color:#ff3333;">
-                        <h4>🗑️ DELETE (Borrar Registros)</h4>
-                        <pre style="margin-top: 0.5rem; margin-bottom: 0;"><code>DELETE FROM Clientes WHERE id_cliente = 1;</code></pre>
+                    <div class="info-card">
+                        <h4>📋 Crear Tabla Básica</h4>
+                        <pre style="margin-bottom: 0; font-size: 1rem;"><code>CREATE TABLE Empleados (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50),
+    puesto VARCHAR(50)
+);</code></pre>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- Slide 14 -->
         <section class="slide" id="slide-14">
             <div class="glass-card">
-                <h2>Funciones de Agregación y Uniones (JOIN)</h2>
+                <h2>Consultas Básicas (SQL FUNDAMENTAL)</h2>
                 <div class="cards-list">
                     <div class="info-card">
-                        <h4>📊 Agrupamiento (COUNT, SUM, AVG)</h4>
-                        <pre style="margin-bottom: 0;"><code>SELECT id_cliente, COUNT(*) AS num_ventas FROM Ventas GROUP BY id_cliente;</code></pre>
+                        <h4>🔍 SELECT y WHERE</h4>
+                        <pre><code>SELECT * FROM Empleados;
+SELECT nombre, puesto FROM Empleados WHERE puesto = 'Gerente';</code></pre>
                     </div>
                     <div class="info-card">
-                        <h4>🔗 INNER JOIN (Cruzar Tablas)</h4>
-                        <p>Combina registros que coinciden en ambas tablas usando Llaves Foráneas.</p>
-                        <pre style="margin-bottom: 0;"><code>SELECT c.nombre, v.total FROM Clientes c
-INNER JOIN Ventas v ON c.id_cliente = v.id_cliente;</code></pre>
+                        <h4>➕ INSERT (Crear Registros)</h4>
+                        <pre><code>INSERT INTO Empleados (nombre, puesto) 
+VALUES ('Ana Gómez', 'Administradora');</code></pre>
                     </div>
                 </div>
             </div>
@@ -358,6 +364,26 @@ INNER JOIN Ventas v ON c.id_cliente = v.id_cliente;</code></pre>
 
         <!-- Slide 15 -->
         <section class="slide" id="slide-15">
+            <div class="glass-card">
+                <h2>Modificación y Eliminación (PRECAUCIÓN)</h2>
+                <div class="quote-box" style="margin-top: 1rem; margin-bottom: 2rem; border-left-color: #ff3333;">
+                    ¡IMPORTANTE: Siempre usar la cláusula WHERE para no afectar toda la tabla!
+                </div>
+                <div class="cards-list">
+                    <div class="info-card" style="border-left-color:#F29111;">
+                        <h4>✏️ UPDATE (Actualizar Datos)</h4>
+                        <pre style="margin-top: 0.5rem; margin-bottom: 0;"><code>UPDATE Empleados SET puesto = 'Directora' WHERE id = 1;</code></pre>
+                    </div>
+                    <div class="info-card" style="border-left-color:#ff3333;">
+                        <h4>🗑️ DELETE (Borrar Registros)</h4>
+                        <pre style="margin-top: 0.5rem; margin-bottom: 0;"><code>DELETE FROM Empleados WHERE id = 3;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 16 -->
+        <section class="slide" id="slide-16">
             <div class="glass-card">
                 <h2>Mejores Prácticas</h2>
                 <ul class="fancy-list">
@@ -369,8 +395,8 @@ INNER JOIN Ventas v ON c.id_cliente = v.id_cliente;</code></pre>
             </div>
         </section>
 
-        <!-- Slide 16 -->
-        <section class="slide" id="slide-16">
+        <!-- Slide 17 -->
+        <section class="slide" id="slide-17">
             <div class="glass-card center-content">
                 <span class="badge glow">Equipo</span>
                 <h1>¡Gracias por su atención!</h1>
@@ -394,7 +420,7 @@ INNER JOIN Ventas v ON c.id_cliente = v.id_cliente;</code></pre>
 
     <!-- Contador Minimalista Esquina -->
     <div class="slide-counter-corner">
-        <span id="current">1</span> / <span id="total">16</span>
+        <span id="current">1</span> / <span id="total">17</span>
     </div>
 
     <script src="script.js"></script>
