@@ -74,5 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize display values
+    if(document.getElementById('total')) document.getElementById('total').innerText = totalSlides;
     updatePresentation();
 });
